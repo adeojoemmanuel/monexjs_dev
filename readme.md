@@ -23,8 +23,9 @@ What things you need to setup the project and how to install them
 
 #### to verify you have node and electron installed
 ```
-run node -v
-and electron -v
+**run** 
+node -v
+electron -v
 ```
 
 ### Installing
@@ -37,7 +38,7 @@ and electron -v
 
   - lunch your terminal and execute "node installation.js"      
       
-       *note* would take a while
+       **note** would take a while
 
   - you should now have the project in Applications/monexjs directory
 
