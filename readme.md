@@ -29,8 +29,8 @@ and electron -v
 
 ### Installing
 
-  - clone using 'git clone https://oyink7@bitbucket.org/adeojo/monexjs_dev.git'
-
+  - clone using 'git clone https://github.com/adeojoemmanuel/monexjs_dev.git'
+  
   - after cloneing go into the directory 
 
   - lunch your terminal and execute "node installation.js"      
