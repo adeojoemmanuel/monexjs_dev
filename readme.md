@@ -31,11 +31,13 @@ and electron -v
 
   - clone using git clone https://github.com/adeojoemmanuel/monexjs_dev.git
   
-  - after cloneing go into the directory 
+  - after cloneing go into monexjs_dev the directory 
+
+  - then the mac directory
 
   - lunch your terminal and execute "node installation.js"      
       
-       note would take a while
+       *note* would take a while
 
   - you should now have the project in Applications/monexjs directory
 
@@ -47,7 +49,7 @@ and electron -v
 
   - and start mongo
 
-  - access the mongoadmin from localhost/9090
+  - access the mongoadmin from localhost:9090
 
   - view console logs on the electron app console
 
