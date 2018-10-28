@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Monexjs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- DataTables -->
+    <link href="../plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="assets/js/modernizr.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation Bar-->
+    <header id="topnav">
+        <div class="topbar-main">
+            <div class="container">
+                <div class="logo">
+                    <a href="index-2.html" class="logo">
+                        <img src="assets/icoms/logo.png" alt="" height="24">
+                    </a>
+                </div>
+            </div> <!-- end container -->
+        </div>
+    </header>
+    <!-- End Navigation Bar-->
+
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-box">
+                        <table class="table table-hover m-0 tickets-list table-actions-bar dt-responsive nowrap" cellspacing="0" width="100%" id="datatable">
+                            <tbody>
+                            <tr>
+                            
+                                <td>
+                                    <a href="javascript: void(0);">
+                                        <img src="assets/icoms/nodejs.png" alt="contact-img" title="contact-img" class="img-circle" />
+                                        <span class="m-l-5"><b>Node server</b></span>
+                                    </a>
+                                </td>
+
+                                <!-- <td>
+                                    Support for theme
+                                </td> -->
+
+                                
+                                <td>
+                                    <button id="status" class="btn btn-primary waves-effect w-md waves-light">Start</button>
+                                </td>
+
+                                <td id="port-node">
+                                    port 
+                                </td>
+                                <td id="pid-node">
+                                     pid
+                                </td>
+                                <td>
+                                    <button disabled>config</button>
+                               </td>
+                               <td>
+                                    <button id="node-logs">logs</button>
+                               </td>
+                                
+                            </tr>
+
+                            <tr>
+                               
+                                <td>
+                                    <a href="javascript: void(0);">
+                                        <img src="assets/icoms/mongo.png" alt="contact-img" title="contact-img" class="img-circle" />
+                                        <span class="m-l-5"><b>MongoDB</b></span>
+                                    </a>
+                                </td>
+
+                                <!-- <td>
+                                    New submission on your website
+                                </td> -->
+
+                                <td>
+                                   <button id="status-mongo" class="btn btn-primary waves-effect w-md waves-light">Start</button>
+                                <td id="port-mongo">
+                                    port
+                                </td>
+                                <td id="pid-mongo">
+                                     pid
+                                </td>
+                                <td>
+                                    <button disabled>config</button>
+                               </td>
+                               <td>
+                                    <button id="mongo-logs">logs</button>
+                               </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="go-app">Go to application</button>
+                                </td>
+                                <td>
+                                    <button id="go-dir">Open application dir</button>
+                                </td>
+                                <td>
+                                    <button id="go-help">Help</button>
+                                </td>
+                                <td>
+                                    <button id="go-log">Logs</button>
+                                </td>
+                                <td>
+                                    <button id="go-quit">Quit</button>
+                                </td>
+                            </tr>
+                    
+
+                            </tbody>
+                        </table>
+ 
+                    </div>
+                </div><!-- end col -->
+            </div>
+            <style type="text/css">
+                .fixed-box {
+                    overflow-y: scroll;
+                    width:  100%;
+                    height: 100px;
+                    background-color: black;
+                    font-size: 12px;         
+                }
+            </style>
+                
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card-box fixed-box" id="droid-output">
+                        <h4>console message</h4>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Footer -->
+            <footer class="footer text-right">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-center">
+                            2017 © monexJS - monexJS.com
+                            <!-- end row -->
+            We are using Node.js <script>document.write(process.versions.node)</script>,
+            Chromium <script>document.write(process.versions.chrome)</script>,
+            and Electron <script>document.write(process.versions.electron)</script>.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer -->
+
+        </div> <!-- end container -->
+    </div>
+    <!-- end wrapper -->
+
+
+    <!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    
+
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables/responsive.bootstrap.min.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/jquery.core.js"></script>
+    <script src="assets/js/jquery.app.js"></script>
+    <script type="text/javascript" src="node_modules/electron-open-link-in-browser/build/electron-open-link-in-browser.js"></script>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+    <!-- <script src="./renderer.js"></script> -->
+    <script>
+        // GLUE to the screen
+        function getDroidOutput() { return document.getElementById("droid-output");  };
+        function getStatus() { return document.getElementById("status");  };
+        // End of GLUE
+    </script>
+
+</body>
+</html>

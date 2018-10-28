@@ -1,0 +1,42 @@
+<div ng-include="'views/header.html'"></div>
+<br>
+<br>
+<div class="wrapper" >
+    <div class="sidebar" ng-controller="main"  data-background-color="white" data-active-color="danger">
+
+        <!--
+    		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+    		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+    	-->
+        
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.Monexjs.com" class="simple-text">
+                    MONEXJS
+                </a>
+            </div>
+
+            
+
+            <ul class="nav">
+                <li class="active">
+                    <a ui-sref=".view">
+                        <i class="ti-server">Dashboard</i>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- <div class="row" ng-show="menu.database"> -->
+                <ul class="nav" ng-repeat="db in databases.databases">
+                    <li class="active">
+                        <a ui-sref="main.collections({data: db.name})">
+                            <i class="ti-server">{{ db.name }}</i>
+                        </a>
+                    </li>
+                </ul>
+            <!-- </div> -->
+    	</div>
+    </div>
+
+    <div  ui-view style="margin-left: 260px";></div>
+</div>
