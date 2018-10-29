@@ -11,13 +11,14 @@ var fs = require('fs');
 var opener = require('electron').shell;
 const {shell} = require('electron');
 const remote = require('electron').remote
+var http = require('http');
  
-function getDroidOutput() { 
+function getDroidO2utput() { 
   return document.getElementById("droid-output");  
 }
 
 function getStatus() { 
-  return document.getElementById("status");  
+  return document.getElementById("status-node");  
 }
 
 function appendToDroidOutput(msg) { 
@@ -63,69 +64,41 @@ function execsh(shellname, vid){
 
 function startNode() {
   const { exec } = require('child_process');
-  if (isWin === 'darwin') {
-    var ls = processes.spawn(drive + "Applications/monexjs/shell/nodestart.sh")
-    //console.log(ls)
-    ls.stdout.on('data', function (res) {
-      //appendToDroidOutput('\n' + 'stdout: ' + res + '<br>');
-      codeOutput = res.toString().trim();
-      if (codeOutput == "started"){
-        setStatus('Stop');
-        setid('port-node', '9090');
-        execsh('returnnodepid', 'pid-node');
-        appendToDroidOutput('\n' + 'MonexJS  listening at port 9090' + '<br>');
-      }else{
+  var ls = processes.spawn(drive + "Applications/monexjs/shell/nodestart.sh")
+
+  ls.stdout.on('data', function(res){
+    console.log(res);
+    codeOutput = res.toString().trim();
+    console.log(codeOutput);
+    if (codeOutput === "started"){
+      setStatus('Stop');
+      setid('port-node', '9090');
+      execsh('returnnodepid', 'pid-node');
+      // appendToDroidOutput('\n' + 'MonexJS  listening at port 9090' + '<br>');
+    }else{
+      http.get('http://localhost:9090', function (res) {
+        //working well no action;
+      }).on('error', function(e) {
         setStatus('Start');
-        //appendToDroidOutput(codeOutput + '<br>');
-        fs.appendFileSync('/Applications/monexjs/logs/nodelog.mnex', codeOutput);
-        appendToDroidOutput('\n' + 'MonexJS  error starting at port 9090' + '<br>');
-      }
-    });
+      });
 
-    ls.stderr.on('data', function (data) {
-      appendToDroidOutput('\n' + 'stderr: ' + data + '<br>');
-    });
+      fs.appendFileSync('/Applications/monexjs/logs/nodelog.mnex', codeOutput);
+      appendToDroidOutput('\n' + 'MonexJS  error starting at port 9090' + '<br>');
+    }
+  });
 
-    ls.on('close', function (code) {
-         //  if (code == 0){
-         // 	  setStatus('Stop');
-         //  }else{
-         // 	setStatus('Start ');
-         // }
-	  });
-  }else if(isWin === 'win32'){
-    var ls = processes.spawn(drive + "Applications/monexjs/shell/nodestart.bat")
-    //console.log(ls)
-    ls.stdout.on('data', function (res) {
-      appendToDroidOutput('\n' + 'stdout: ' + res + '<br>');
-      codeOutput = res.toString().trim();
-      if (codeOutput == "started"){
-        setStatus('Stop');
-        appendToDroidOutput('\n' + 'MonexJS  listening at port 9090' + '<br>');
-      }else{
-        // setStatus('Start');
-      }
-    });
+  ls.stderr.on('data', function (data) {
+    console.log(data)
+    appendToDroidOutput('\n' + 'stderr: ' + data + '<br>');
+  });
 
-    ls.stderr.on('data', function (data) {
-      appendToDroidOutput('\n' + 'stderr: ' + data + '<br>');
-    });
-
-    ls.on('close', function (code) {
-         //  if (code == 0){
-         // 	  setStatus('Stop');
-         //  }else{
-         // 	setStatus('Start ');
-         // }
-	  });
-  }else{
-      console.log("unknown os")
-  }
+  ls.on('close', function (code) {
+    console.log(code)
+  });
 }
 
 function stopNode(){
   const { exec } = require('child_process');
-  if (isWin === 'darwin') {
     exec(drive + "applications/monexjs/shell/terminate.sh", (err, stdout, stderr) => {
       if (err) {
         appendToDroidOutput(err);
@@ -144,32 +117,11 @@ function stopNode(){
       // appendToDroidOutput(stdout);
       
     });
-  }else if(isWin === 'win32'){
-    exec(drive + "applications/monexjs/shell/terminate.bat", (err, stdout, stderr) => {
-      if (err) {
-        appendToDroidOutput(err);
-        return;
-      }
-      codeOutput = stdout.toString().trim();
-      if (codeOutput == "closed"){
-        setStatus('Start');
-        appendToDroidOutput('\n' + 'MonexJS  closed at port 9090 ' + '<br>');
-      }else{
-        setStatus('Start');
-        appendToDroidOutput("error stoping node");
-      }
-      // appendToDroidOutput(stdout);
-      
-    });
-  }else{
-      console.log("unknown os")
-  }
 }
 
 
 function startMongo() {
   const { exec } = require('child_process');
-  if (isWin === 'darwin'){
     var ls = processeses.spawn(drive + "Applications/monexjs/shell/startmongo.sh");
     ls.stdout.on('data', function (res) {
         appendToDroidOutput('\n' + 'stdout: ' + res + '<br>');
@@ -196,30 +148,10 @@ function startMongo() {
         // 	setStatus('Start ');
         // }
     });
-  }else if(isWin === 'win32'){
-    exec(drive + "Applications/monexjs/shell/startmongo.bat", (err, stdout, stderr) => {
-      if (err) {
-        appendToDroidOutput(err);
-      }
-      codeOutput = stdout.toString().trim();
-      console.log(codeOutput);
-      if (codeOutput == "startedrunning"){
-        setStatusmongo("Stop");
-        appendToDroidOutput('\n' + 'MongoDB Started ' + '<br>');
-      }else{
-        appendToDroidOutput("error starting mongodb");
-      }
-      // appendToDroidOutput(stdout);
-      
-    });
-  }else{
-      console.log("unknown os")
-  }
 }
 
 function stopMongo(){
   const { exec } = require('child_process');
-  if (isWin === 'darwin') {
     exec(drive + "Applications/monexjs/shell/stopmongo.sh", (err, stdout, stderr) => {
       if (err) {
         appendToDroidOutput(err);
@@ -237,25 +169,6 @@ function stopMongo(){
       // appendToDroidOutput(stdout);
       
     });
-  }else if(isWin === 'win32'){
-    exec(drive + "Applications/monexjs/shell/stopmongo.bat", (err, stdout, stderr) => {
-      if (err) {
-        appendToDroidOutput(err);
-      }
-      codeOutput = stdout.toString().trim();
-      if (codeOutput == "closed"){
-        setStatusmongo('Start');
-        appendToDroidOutput('\n' + 'MongoDB Closed ' + '<br>');
-      }else{
-        setStatusmongo('Start');
-        appendToDroidOutput("trying to stop mongo error");
-      }
-      // appendToDroidOutput(stdout);
-      
-    });
-  }else{
-      console.log("unknown os")
-  }
 }
 
 
@@ -270,7 +183,7 @@ document.getElementById('status-mongo').addEventListener('click', function(e) {
   }
 });
 
-document.getElementById('status').addEventListener('click', function(e) {
+document.getElementById('status-node').addEventListener('click', function(e) {
   if(getStatus().innerHTML == "Start"){
     setStatus('Starting');
     console.log("clicked");  
@@ -317,14 +230,3 @@ document.getElementById('go-quit').addEventListener('click', function(e){
   let w = remote.getCurrentWindow()
   w.close()
 })
-
-// document.getElementById('go-shell').addEventListener('click', function(e){
-//   //exec('open /Applications/monexjs/mongodb/bin/mongo'); // notice this without a callback..
-//   exec(drive + "Applications/monexjs/shell/openmongoshell.sh", (err, stdout, stderr) => {
-//     if (err) {
-//       appendToDroidOutput(err);
-//     }
-//     codeOutput = stdout.toString().trim();
-//     console.log(codeOutput);
-//   });
-// })

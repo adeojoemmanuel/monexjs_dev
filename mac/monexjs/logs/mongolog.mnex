@@ -391,4 +391,45 @@ null2018-05-16T23:32:21.365+0100 I CONTROL  [initandlisten] MongoDB starting : p
 2018-05-16T23:32:30.734+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
 2018-05-16T23:32:30.764+0100 I CONTROL  [signalProcessingThread] now exiting
 2018-05-16T23:32:30.790+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
-null
+null2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] MongoDB starting : pid=809 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] db version v3.6.4
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] git version: d0181a711f7e7f39e60b5aeb1dc7097bf6ae5856
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 0.9.8zh 14 Jan 2016
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] allocator: system
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] modules: enterprise 
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] build environment:
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-10-28T22:51:59.307+0100 I CONTROL  [initandlisten] options: {}
+2018-10-28T22:51:59.359+0100 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /data/db not found., terminating
+2018-10-28T22:51:59.359+0100 I CONTROL  [initandlisten] now exiting
+2018-10-28T22:51:59.359+0100 I CONTROL  [initandlisten] shutting down with code:100
+Error: Command failed: cd / &&  Applications/monexjs/mongodb/bin/mongod
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] MongoDB starting : pid=898 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] db version v3.6.4
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] git version: d0181a711f7e7f39e60b5aeb1dc7097bf6ae5856
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 0.9.8zh 14 Jan 2016
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] allocator: system
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] modules: enterprise 
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] build environment:
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-10-28T22:53:02.273+0100 I CONTROL  [initandlisten] options: {}
+2018-10-28T22:53:02.273+0100 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /data/db not found., terminating
+2018-10-28T22:53:02.274+0100 I CONTROL  [initandlisten] now exiting
+2018-10-28T22:53:02.274+0100 I CONTROL  [initandlisten] shutting down with code:100
+Error: Command failed: cd / &&  Applications/monexjs/mongodb/bin/mongod
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] MongoDB starting : pid=4828 port=27017 dbpath=/data/db 64-bit host=225.hs10.lmu.edu.ng
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] db version v3.6.4
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] git version: d0181a711f7e7f39e60b5aeb1dc7097bf6ae5856
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 0.9.8zh 14 Jan 2016
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] allocator: system
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] modules: enterprise 
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] build environment:
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-10-29T09:45:40.246+0100 I CONTROL  [initandlisten] options: {}
+2018-10-29T09:45:40.268+0100 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /data/db not found., terminating
+2018-10-29T09:45:40.268+0100 I CONTROL  [initandlisten] now exiting
+2018-10-29T09:45:40.268+0100 I CONTROL  [initandlisten] shutting down with code:100
+Error: Command failed: cd / &&  Applications/monexjs/mongodb/bin/mongod

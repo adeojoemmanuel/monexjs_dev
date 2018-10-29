@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd / && node applications/monexjs/run.js
+cd / && node Applications/monexjs/run.js
 
                                                    
