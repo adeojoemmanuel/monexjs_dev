@@ -22,8 +22,7 @@ What things you need to setup the project and how to install them
 
 
 #### to verify you have node and electron installed
-```
-**run** 
+```run
 node -v
 electron -v
 ```
