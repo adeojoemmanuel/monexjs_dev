@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd / && node applications/monexjs/jsShellScript/startmongo.js
+cd / && node Applications/monexjs/jsShellScript/startmongo.js

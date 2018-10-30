@@ -61,7 +61,6 @@ function execsh(shellname, vid){
   });
 }
 
-
 function startNode() {
   const { exec } = require('child_process');
   var ls = processes.spawn(drive + "Applications/monexjs/shell/nodestart.sh")
@@ -83,13 +82,13 @@ function startNode() {
       });
 
       fs.appendFileSync('/Applications/monexjs/logs/nodelog.mnex', codeOutput);
-      appendToDroidOutput('\n' + 'MonexJS  error starting at port 9090' + '<br>');
+      // appendToDroidOutput('\n' + 'MonexJS  error starting at port 9090' + '<br>');
     }
   });
 
   ls.stderr.on('data', function (data) {
     console.log(data)
-    appendToDroidOutput('\n' + 'stderr: ' + data + '<br>');
+    // appendToDroidOutput('\n' + 'stderr: ' + data + '<br>');
   });
 
   ls.on('close', function (code) {
@@ -105,6 +104,7 @@ function stopNode(){
         return;
       }
       codeOutput = stdout.toString().trim();
+      console.log(codeOutput);
       if (codeOutput == "closed"){
         setStatus('Start');
         setid('port-node', 'port');
