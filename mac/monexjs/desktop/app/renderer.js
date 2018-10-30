@@ -73,6 +73,11 @@ function startNode() {
       setStatus('Stop');
       setid('port-node', '9090');
       execsh('returnnodepid', 'pid-node');
+      http.get('http://localhost:9090', function (res) {
+        //working well no action;
+      }).on('error', function(e) {
+        setStatus('Start');
+      });
       // appendToDroidOutput('\n' + 'MonexJS  listening at port 9090' + '<br>');
     }else{
       http.get('http://localhost:9090', function (res) {
@@ -112,6 +117,8 @@ function stopNode(){
         appendToDroidOutput('\n' + 'MonexJS  closed at port 9090 ' + '<br>');
       }else{
         setStatus('Start');
+        setid('port-node', 'port');
+        setid('pid-node', 'pid');
         appendToDroidOutput("error stoping node");
       }
       // appendToDroidOutput(stdout);
@@ -186,7 +193,7 @@ document.getElementById('status-mongo').addEventListener('click', function(e) {
 document.getElementById('status-node').addEventListener('click', function(e) {
   if(getStatus().innerHTML == "Start"){
     setStatus('Starting');
-    console.log("clicked");  
+    console.log("clicked");
     startNode(); 
   }else if(getStatus().innerHTML == "Stop"){
       setStatus('Stoping');

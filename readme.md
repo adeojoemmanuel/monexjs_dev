@@ -1,6 +1,6 @@
 # MonexJs development
 
-javascript server and mongodb admin manager
+javascript server and mongodb admin manager.  more like xampp for JS 
 
 ## Getting Started
 

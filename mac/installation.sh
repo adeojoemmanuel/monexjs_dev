@@ -15,3 +15,4 @@ mkdir -p /data/db
 chown -R `id -un` /data/db
 chmod -R a+rwx /data/db
 chmod 755 /data/db
+

@@ -475,3 +475,173 @@ Error: Command failed: cd / &&  Applications/monexjs/mongodb/bin/mongod
 2018-10-29T18:45:50.390+0100 I CONTROL  [initandlisten] now exiting
 2018-10-29T18:45:50.390+0100 I CONTROL  [initandlisten] shutting down with code:100
 Error: Command failed: cd / &&  Applications/monexjs/mongodb/bin/mongod
+2018-10-30T12:21:58.994+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten] MongoDB starting : pid=49122 port=27017 dbpath=/data/db 64-bit host=216.hs10.lmu.edu.ng
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten] allocator: system
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten] modules: none
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten] build environment:
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-10-30T12:21:59.014+0100 I CONTROL  [initandlisten] options: {}
+2018-10-30T12:21:59.158+0100 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2018-10-30T12:21:59.186+0100 I CONTROL  [initandlisten] now exiting
+2018-10-30T12:21:59.214+0100 I CONTROL  [initandlisten] shutting down with code:48
+Error: Command failed: ~/mongodb/bin/mongod
+2018-10-30T12:12:51.258+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten] MongoDB starting : pid=48563 port=27017 dbpath=/data/db 64-bit host=216.hs10.lmu.edu.ng
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten] allocator: system
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten] modules: none
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten] build environment:
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-10-30T12:12:52.152+0100 I CONTROL  [initandlisten] options: {}
+2018-10-30T12:12:52.236+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-10-30T12:13:00.168+0100 I STORAGE  [initandlisten] WiredTiger message [1540897980:138544][48563:0x7fffb1373380], txn-recover: Set global recovery timestamp: 0
+2018-10-30T12:13:05.600+0100 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] 
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] 
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-10-30T12:13:12.816+0100 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-10-30T12:13:12.817+0100 I CONTROL  [initandlisten] 
+2018-10-30T12:13:13.682+0100 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 1b8fd127-c138-4503-bcb7-a1a39739d834
+2018-10-30T12:13:16.960+0100 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.0
+2018-10-30T12:13:17.896+0100 I COMMAND  [initandlisten] command admin.system.roles command: find { find: "system.roles", $db: "admin" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:107 locks:{ Global: { acquireCount: { r: 8, w: 3, W: 3 } }, Database: { acquireCount: { r: 2, W: 3 } }, Collection: { acquireCount: { r: 2, w: 1 } } } protocol:op_msg 126ms
+2018-10-30T12:13:17.927+0100 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: a3eeb57e-acf7-41a0-92dd-3efe1a03871a
+2018-10-30T12:13:19.869+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2018-10-30T12:13:20.292+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-10-30T12:13:20.313+0100 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: 02ea82b7-594d-4880-a310-f6836ae84e4b
+2018-10-30T12:13:22.760+0100 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+2018-10-30T12:13:22.760+0100 I INDEX    [LogicalSessionCacheRefresh] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2018-10-30T12:13:23.110+0100 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
+2018-10-30T12:13:23.111+0100 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: createIndexes { createIndexes: "system.sessions", indexes: [ { key: { lastUse: 1 }, name: "lsidTTLIndex", expireAfterSeconds: 1800 } ], $db: "config" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2, W: 1 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 2799ms
+2018-10-30T12:22:00.518+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-10-30T12:22:00.518+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-10-30T12:22:00.518+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-10-30T12:22:00.519+0100 I CONTROL  [signalProcessingThread] Shutting down free monitoring
+2018-10-30T12:22:00.519+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2018-10-30T12:22:00.545+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2018-10-30T12:22:01.737+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2018-10-30T12:22:01.764+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-10-30T12:22:01.764+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null2018-10-30T12:22:08.429+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten] MongoDB starting : pid=49140 port=27017 dbpath=/data/db 64-bit host=216.hs10.lmu.edu.ng
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten] allocator: system
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten] modules: none
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten] build environment:
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-10-30T12:22:08.448+0100 I CONTROL  [initandlisten] options: {}
+2018-10-30T12:22:08.502+0100 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-10-30T12:22:08.503+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-10-30T12:22:16.253+0100 I STORAGE  [initandlisten] WiredTiger message [1540898536:253772][49140:0x7fffb1373380], txn-recover: Main recovery loop: starting at 1/24064
+2018-10-30T12:22:16.406+0100 I STORAGE  [initandlisten] WiredTiger message [1540898536:406584][49140:0x7fffb1373380], txn-recover: Recovering log 1 through 2
+2018-10-30T12:22:16.715+0100 I STORAGE  [initandlisten] WiredTiger message [1540898536:715529][49140:0x7fffb1373380], txn-recover: Recovering log 2 through 2
+2018-10-30T12:22:16.779+0100 I STORAGE  [initandlisten] WiredTiger message [1540898536:779190][49140:0x7fffb1373380], txn-recover: Set global recovery timestamp: 0
+2018-10-30T12:22:19.889+0100 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] 
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] 
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-10-30T12:22:25.579+0100 I CONTROL  [initandlisten] 
+2018-10-30T12:22:27.351+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2018-10-30T12:22:27.405+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-10-30T12:22:31.488+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:60619 #1 (1 connection now open)
+2018-10-30T12:22:31.756+0100 I NETWORK  [conn1] end connection 127.0.0.1:60619 (0 connections now open)
+2018-10-30T12:22:38.356+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:61938 #2 (1 connection now open)
+2018-10-30T12:22:38.357+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:61939 #3 (2 connections now open)
+2018-10-30T12:22:38.510+0100 I COMMAND  [conn3] command admin.$cmd command: listCollections { listCollections: true, filter: {}, cursor: {}, $db: "admin" } numYields:0 reslen:331 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 143ms
+2018-10-30T12:22:38.510+0100 I COMMAND  [conn2] command admin.$cmd command: listCollections { listCollections: true, filter: {}, cursor: {}, $db: "admin" } numYields:0 reslen:331 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 144ms
+2018-10-30T12:22:38.514+0100 I NETWORK  [conn3] end connection 127.0.0.1:61939 (1 connection now open)
+2018-10-30T12:22:38.517+0100 I NETWORK  [conn2] end connection 127.0.0.1:61938 (0 connections now open)
+2018-10-30T12:22:40.460+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:62384 #4 (1 connection now open)
+2018-10-30T12:22:40.470+0100 I NETWORK  [conn4] end connection 127.0.0.1:62384 (0 connections now open)
+2018-10-30T12:22:40.472+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:62388 #5 (1 connection now open)
+2018-10-30T12:22:40.492+0100 I NETWORK  [conn5] end connection 127.0.0.1:62388 (0 connections now open)
+2018-10-30T12:22:42.059+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:62698 #6 (1 connection now open)
+2018-10-30T12:22:42.059+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:62699 #7 (2 connections now open)
+2018-10-30T12:22:42.065+0100 I NETWORK  [conn7] end connection 127.0.0.1:62699 (1 connection now open)
+2018-10-30T12:22:42.067+0100 I NETWORK  [conn6] end connection 127.0.0.1:62698 (0 connections now open)
+2018-10-30T12:22:59.511+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:50059 #8 (1 connection now open)
+2018-10-30T12:22:59.513+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:50060 #9 (2 connections now open)
+2018-10-30T12:22:59.515+0100 I NETWORK  [conn8] end connection 127.0.0.1:50059 (1 connection now open)
+2018-10-30T12:22:59.517+0100 I NETWORK  [conn9] end connection 127.0.0.1:50060 (0 connections now open)
+2018-10-30T12:23:19.297+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54391 #10 (1 connection now open)
+2018-10-30T12:23:19.325+0100 I STORAGE  [conn10] createCollection: testv2.testv2 with generated UUID: fec4585e-aae3-409c-a59a-bfec9bf8bafa
+2018-10-30T12:23:22.970+0100 I COMMAND  [conn10] command testv2.testv2 command: create { create: "testv2", $db: "testv2" } numYields:0 reslen:53 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } } } protocol:op_query 3657ms
+2018-10-30T12:23:22.973+0100 I NETWORK  [conn10] end connection 127.0.0.1:54391 (0 connections now open)
+2018-10-30T12:23:22.984+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54474 #11 (1 connection now open)
+2018-10-30T12:23:22.986+0100 I NETWORK  [conn11] end connection 127.0.0.1:54474 (0 connections now open)
+2018-10-30T12:23:27.940+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:55439 #12 (1 connection now open)
+2018-10-30T12:23:27.940+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:55440 #13 (2 connections now open)
+2018-10-30T12:23:27.942+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:55441 #14 (3 connections now open)
+2018-10-30T12:23:27.945+0100 I NETWORK  [conn12] end connection 127.0.0.1:55439 (2 connections now open)
+2018-10-30T12:23:27.948+0100 I NETWORK  [conn13] end connection 127.0.0.1:55440 (1 connection now open)
+2018-10-30T12:23:27.953+0100 I NETWORK  [conn14] end connection 127.0.0.1:55441 (0 connections now open)
+2018-10-30T12:23:36.553+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:57263 #15 (1 connection now open)
+2018-10-30T12:23:36.553+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:57264 #16 (2 connections now open)
+2018-10-30T12:23:36.561+0100 I NETWORK  [conn15] end connection 127.0.0.1:57263 (1 connection now open)
+2018-10-30T12:23:36.569+0100 I NETWORK  [conn16] end connection 127.0.0.1:57264 (0 connections now open)
+2018-10-30T12:23:41.376+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:58086 #17 (1 connection now open)
+2018-10-30T12:23:41.381+0100 I STORAGE  [conn17] createCollection: testv2.users with generated UUID: ad1e5edd-444a-44e2-a1d1-62bfdad58d1e
+2018-10-30T12:23:43.232+0100 I COMMAND  [conn17] command testv2.users command: create { create: "users", $db: "testv2" } numYields:0 reslen:53 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } } } protocol:op_query 1851ms
+2018-10-30T12:23:43.234+0100 I NETWORK  [conn17] end connection 127.0.0.1:58086 (0 connections now open)
+2018-10-30T12:23:43.242+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:58119 #18 (1 connection now open)
+2018-10-30T12:23:43.245+0100 I NETWORK  [conn18] end connection 127.0.0.1:58119 (0 connections now open)
+2018-10-30T12:23:50.515+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:59762 #19 (1 connection now open)
+2018-10-30T12:23:50.522+0100 I NETWORK  [conn19] end connection 127.0.0.1:59762 (0 connections now open)
+2018-10-30T12:23:50.522+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:59766 #20 (1 connection now open)
+2018-10-30T12:23:50.536+0100 I NETWORK  [conn20] end connection 127.0.0.1:59766 (0 connections now open)
+2018-10-30T12:23:51.810+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:60066 #21 (1 connection now open)
+2018-10-30T12:23:51.810+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:60068 #22 (2 connections now open)
+2018-10-30T12:23:51.818+0100 I NETWORK  [conn22] end connection 127.0.0.1:60068 (1 connection now open)
+2018-10-30T12:23:51.823+0100 I NETWORK  [conn21] end connection 127.0.0.1:60066 (0 connections now open)
+2018-10-30T12:24:05.495+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:63197 #23 (1 connection now open)
+2018-10-30T12:24:05.501+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:63198 #24 (2 connections now open)
+2018-10-30T12:24:05.638+0100 I COMMAND  [conn23] command testv2.users command: find { find: "users", filter: {}, $db: "testv2" } planSummary: COLLSCAN keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:116 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 137ms
+2018-10-30T12:24:05.638+0100 I COMMAND  [conn24] command testv2.users command: find { find: "users", filter: {}, $db: "testv2" } planSummary: COLLSCAN keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:116 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 135ms
+2018-10-30T12:24:05.639+0100 I NETWORK  [conn23] end connection 127.0.0.1:63197 (1 connection now open)
+2018-10-30T12:24:05.640+0100 I NETWORK  [conn24] end connection 127.0.0.1:63198 (0 connections now open)
+2018-10-30T12:24:35.472+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53142 #25 (1 connection now open)
+2018-10-30T12:24:35.477+0100 I NETWORK  [conn25] end connection 127.0.0.1:53142 (0 connections now open)
+2018-10-30T12:24:35.489+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53146 #26 (1 connection now open)
+2018-10-30T12:24:35.495+0100 I NETWORK  [conn26] end connection 127.0.0.1:53146 (0 connections now open)
+2018-10-30T12:24:36.323+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53318 #27 (1 connection now open)
+2018-10-30T12:24:36.325+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53319 #28 (2 connections now open)
+2018-10-30T12:24:36.326+0100 I NETWORK  [conn27] end connection 127.0.0.1:53318 (1 connection now open)
+2018-10-30T12:24:36.331+0100 I NETWORK  [conn28] end connection 127.0.0.1:53319 (0 connections now open)
+2018-10-30T12:24:38.210+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:53761 #29 (1 connection now open)
+2018-10-30T12:24:38.216+0100 I NETWORK  [conn29] end connection 127.0.0.1:53761 (0 connections now open)
+2018-10-30T12:24:40.543+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54299 #30 (1 connection now open)
+2018-10-30T12:24:40.543+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54300 #31 (2 connections now open)
+2018-10-30T12:24:40.543+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:54301 #32 (3 connections now open)
+2018-10-30T12:24:40.549+0100 I NETWORK  [conn30] end connection 127.0.0.1:54299 (2 connections now open)
+2018-10-30T12:24:40.554+0100 I NETWORK  [conn32] end connection 127.0.0.1:54301 (1 connection now open)
+2018-10-30T12:24:40.560+0100 I NETWORK  [conn31] end connection 127.0.0.1:54300 (0 connections now open)
+2018-10-30T12:24:50.015+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-10-30T12:24:50.015+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-10-30T12:24:50.015+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-10-30T12:24:50.046+0100 I CONTROL  [signalProcessingThread] Shutting down free monitoring
+2018-10-30T12:24:50.046+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2018-10-30T12:24:50.071+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2018-10-30T12:24:52.869+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2018-10-30T12:24:52.895+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-10-30T12:24:52.895+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null
