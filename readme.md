@@ -2,10 +2,12 @@
 
 javascript server and mongodb admin manager.  more like xampp for JS 
 
-## image
+## Web Browser view of your mongoDB database
 
 ![alt text](https://raw.githubusercontent.com/adeojoemmanuel/monexjs_dev/master/web.png)
 
+
+## Control panel Desktop app to star and stop the node server and javascript server
 
 ![alt text](https://raw.githubusercontent.com/adeojoemmanuel/monexjs_dev/master/desktop.png)
 
