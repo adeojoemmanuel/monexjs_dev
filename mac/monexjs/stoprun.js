@@ -19,11 +19,4 @@ function killport(port) {
   }
 }
 
-function unitTest(){
-	var port = 9090;
-	var a = `lsof -t -i:${port}`
-	return a;
-}
-
-// console.log(unitTest());
 killport(9090);
