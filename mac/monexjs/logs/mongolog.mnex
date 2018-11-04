@@ -644,4 +644,211 @@ null2018-10-30T12:22:08.429+0100 I CONTROL  [main] Automatically disabling TLS 1
 2018-10-30T12:24:52.869+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
 2018-10-30T12:24:52.895+0100 I CONTROL  [signalProcessingThread] now exiting
 2018-10-30T12:24:52.895+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null2018-11-03T16:29:40.356+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten] MongoDB starting : pid=1317 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T16:29:40.377+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T16:29:40.424+0100 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2018-11-03T16:29:40.474+0100 I CONTROL  [initandlisten] now exiting
+2018-11-03T16:29:40.480+0100 I CONTROL  [initandlisten] shutting down with code:48
+Error: Command failed: ~/mongodb/bin/mongod
+2018-11-03T16:28:16.861+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten] MongoDB starting : pid=1030 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T16:28:18.818+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T16:28:19.789+0100 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-11-03T16:28:19.789+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-11-03T16:28:37.491+0100 I STORAGE  [initandlisten] WiredTiger message [1541258917:451050][1030:0x7fffb19d8380], txn-recover: Main recovery loop: starting at 2/16256
+2018-11-03T16:28:37.834+0100 I STORAGE  [initandlisten] WiredTiger message [1541258917:834757][1030:0x7fffb19d8380], txn-recover: Recovering log 2 through 3
+2018-11-03T16:28:39.846+0100 I STORAGE  [initandlisten] WiredTiger message [1541258919:846168][1030:0x7fffb19d8380], txn-recover: Recovering log 3 through 3
+2018-11-03T16:28:39.913+0100 I STORAGE  [initandlisten] WiredTiger message [1541258919:913062][1030:0x7fffb19d8380], txn-recover: Set global recovery timestamp: 0
+2018-11-03T16:28:49.871+0100 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2018-11-03T16:29:07.274+0100 I CONTROL  [initandlisten] 
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] 
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-11-03T16:29:07.275+0100 I CONTROL  [initandlisten] 
+2018-11-03T16:29:20.067+0100 I COMMAND  [initandlisten] command admin.system.roles command: find { find: "system.roles", $db: "admin" } planSummary: EOF keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:0 nreturned:0 reslen:107 locks:{ Global: { acquireCount: { r: 6, w: 1, W: 3 } }, Database: { acquireCount: { r: 2, W: 1 } }, Collection: { acquireCount: { r: 2 } } } protocol:op_msg 266ms
+2018-11-03T16:29:20.630+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2018-11-03T16:29:22.363+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-11-03T16:29:22.893+0100 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: createIndexes { createIndexes: "system.sessions", indexes: [ { key: { lastUse: 1 }, name: "lsidTTLIndex", expireAfterSeconds: 1800 } ], $db: "config" } numYields:0 reslen:117 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 2 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 518ms
+2018-11-03T16:30:22.370+0100 I COMMAND  [PeriodicTaskRunner] task: UnusedLockCleaner took: 164ms
+2018-11-03T16:30:22.502+0100 I COMMAND  [PeriodicTaskRunner] task: DBConnectionPool-cleaner took: 131ms
+2018-11-03T16:30:36.488+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:50494 #1 (1 connection now open)
+2018-11-03T16:30:37.311+0100 I COMMAND  [conn1] command admin.$cmd command: listDatabases { listDatabases: 1, $db: "admin" } numYields:0 reslen:298 locks:{ Global: { acquireCount: { r: 10 } }, Database: { acquireCount: { r: 4 } } } protocol:op_query 147ms
+2018-11-03T16:30:37.445+0100 I NETWORK  [conn1] end connection 127.0.0.1:50494 (0 connections now open)
+2018-11-03T16:30:43.303+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:50581 #2 (1 connection now open)
+2018-11-03T16:30:43.303+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:50582 #3 (2 connections now open)
+2018-11-03T16:30:43.604+0100 I COMMAND  [conn2] command local.$cmd command: listCollections { listCollections: true, filter: {}, cursor: {}, $db: "local" } numYields:0 reslen:344 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 295ms
+2018-11-03T16:30:43.604+0100 I COMMAND  [conn3] command local.$cmd command: listCollections { listCollections: true, filter: {}, cursor: {}, $db: "local" } numYields:0 reslen:344 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_query 295ms
+2018-11-03T16:30:43.607+0100 I NETWORK  [conn2] end connection 127.0.0.1:50581 (1 connection now open)
+2018-11-03T16:30:43.610+0100 I NETWORK  [conn3] end connection 127.0.0.1:50582 (0 connections now open)
+2018-11-03T16:30:48.602+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:50792 #4 (1 connection now open)
+2018-11-03T16:30:48.602+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:50793 #5 (2 connections now open)
+2018-11-03T16:30:48.607+0100 I NETWORK  [conn4] end connection 127.0.0.1:50792 (1 connection now open)
+2018-11-03T16:30:48.610+0100 I NETWORK  [conn5] end connection 127.0.0.1:50793 (0 connections now open)
+2018-11-03T16:30:55.892+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:51039 #6 (1 connection now open)
+2018-11-03T16:30:55.892+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:51040 #7 (2 connections now open)
+2018-11-03T16:30:56.295+0100 I COMMAND  [conn6] command testv2.testv2 command: find { find: "testv2", filter: {}, $db: "testv2" } planSummary: COLLSCAN keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:1 nreturned:0 reslen:117 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 2 } } } protocol:op_query 393ms
+2018-11-03T16:30:56.295+0100 I COMMAND  [conn7] command testv2.testv2 command: find { find: "testv2", filter: {}, $db: "testv2" } planSummary: COLLSCAN keysExamined:0 docsExamined:0 cursorExhausted:1 numYields:1 nreturned:0 reslen:117 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 2 } } } protocol:op_query 392ms
+2018-11-03T16:30:56.298+0100 I NETWORK  [conn6] end connection 127.0.0.1:51039 (1 connection now open)
+2018-11-03T16:30:56.301+0100 I NETWORK  [conn7] end connection 127.0.0.1:51040 (0 connections now open)
+2018-11-03T16:31:03.458+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:51198 #8 (1 connection now open)
+2018-11-03T16:31:03.460+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:51199 #9 (2 connections now open)
+2018-11-03T16:31:03.462+0100 I NETWORK  [conn8] end connection 127.0.0.1:51198 (1 connection now open)
+2018-11-03T16:31:03.467+0100 I NETWORK  [conn9] end connection 127.0.0.1:51199 (0 connections now open)
+2018-11-03T16:31:04.436+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:51237 #10 (1 connection now open)
+2018-11-03T16:31:04.440+0100 I NETWORK  [conn10] end connection 127.0.0.1:51237 (0 connections now open)
+2018-11-03T16:31:04.445+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:51239 #11 (1 connection now open)
+2018-11-03T16:31:04.447+0100 I NETWORK  [conn11] end connection 127.0.0.1:51239 (0 connections now open)
+2018-11-03T16:42:26.644+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-11-03T16:42:26.644+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-11-03T16:42:26.644+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-11-03T16:42:26.816+0100 I CONTROL  [signalProcessingThread] Shutting down free monitoring
+2018-11-03T16:42:26.816+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2018-11-03T16:42:26.937+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2018-11-03T16:42:29.916+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2018-11-03T16:42:29.916+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-11-03T16:42:29.916+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null2018-11-03T20:22:18.023+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten] MongoDB starting : pid=11729 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T20:22:18.044+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T20:22:18.253+0100 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2018-11-03T20:22:18.428+0100 I CONTROL  [initandlisten] now exiting
+2018-11-03T20:22:18.497+0100 I CONTROL  [initandlisten] shutting down with code:48
+Error: Command failed: ~/mongodb/bin/mongod
+2018-11-03T20:22:03.621+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten] MongoDB starting : pid=11703 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T20:22:03.900+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T20:22:03.983+0100 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-11-03T20:22:03.983+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-11-03T20:22:12.964+0100 I STORAGE  [initandlisten] WiredTiger message [1541272932:946065][11703:0x7fffb19d8380], txn-recover: Main recovery loop: starting at 3/9216
+2018-11-03T20:22:13.174+0100 I STORAGE  [initandlisten] WiredTiger message [1541272933:174244][11703:0x7fffb19d8380], txn-recover: Recovering log 3 through 4
+2018-11-03T20:22:13.391+0100 I STORAGE  [initandlisten] WiredTiger message [1541272933:391775][11703:0x7fffb19d8380], txn-recover: Recovering log 4 through 4
+2018-11-03T20:22:13.458+0100 I STORAGE  [initandlisten] WiredTiger message [1541272933:458614][11703:0x7fffb19d8380], txn-recover: Set global recovery timestamp: 0
+2018-11-03T20:22:18.429+0100 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2018-11-03T20:22:23.839+0100 I CONTROL  [initandlisten] 
+2018-11-03T20:22:23.839+0100 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-11-03T20:22:23.839+0100 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-11-03T20:22:23.839+0100 I CONTROL  [initandlisten] 
+2018-11-03T20:22:23.840+0100 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2018-11-03T20:22:23.840+0100 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2018-11-03T20:22:23.840+0100 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2018-11-03T20:22:23.840+0100 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2018-11-03T20:22:23.840+0100 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2018-11-03T20:22:23.840+0100 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2018-11-03T20:22:23.840+0100 I CONTROL  [initandlisten] 
+2018-11-03T20:22:27.375+0100 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2018-11-03T20:22:27.788+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2018-11-03T20:22:31.793+0100 I NETWORK  [listener] connection accepted from 127.0.0.1:52723 #1 (1 connection now open)
+2018-11-03T20:22:32.021+0100 I NETWORK  [conn1] end connection 127.0.0.1:52723 (0 connections now open)
+2018-11-03T20:22:35.242+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-11-03T20:22:35.243+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-11-03T20:22:35.243+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-11-03T20:22:35.257+0100 I CONTROL  [signalProcessingThread] Shutting down free monitoring
+2018-11-03T20:22:35.257+0100 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2018-11-03T20:22:35.260+0100 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2018-11-03T20:22:39.738+0100 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2018-11-03T20:22:39.739+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-11-03T20:22:39.739+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null2018-11-03T21:05:52.771+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T21:05:52.986+0100 I CONTROL  [initandlisten] MongoDB starting : pid=14591 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T21:05:52.987+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T21:05:53.071+0100 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-11-03T21:05:53.071+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-11-03T21:05:59.421+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-11-03T21:05:59.421+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-11-03T21:05:59.421+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-11-03T21:05:59.421+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-11-03T21:05:59.421+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null2018-11-03T21:06:03.715+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten] MongoDB starting : pid=14617 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T21:06:03.735+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T21:06:03.811+0100 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-11-03T21:06:03.812+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-11-03T21:06:08.713+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-11-03T21:06:08.713+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-11-03T21:06:08.713+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-11-03T21:06:08.714+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-11-03T21:06:08.714+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null2018-11-03T21:06:10.334+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten] MongoDB starting : pid=14636 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T21:06:10.365+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T21:06:10.368+0100 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-11-03T21:06:10.368+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-11-03T21:06:12.934+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-11-03T21:06:12.934+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-11-03T21:06:12.934+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-11-03T21:06:12.934+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-11-03T21:06:12.934+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
+null2018-11-03T21:07:57.075+0100 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten] MongoDB starting : pid=14765 port=27017 dbpath=/data/db 64-bit host=im-MacBook-Pro.local
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten] db version v4.0.3
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten] allocator: system
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten] modules: none
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten] build environment:
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten]     distarch: x86_64
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-11-03T21:07:57.239+0100 I CONTROL  [initandlisten] options: {}
+2018-11-03T21:07:57.267+0100 I STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2018-11-03T21:07:57.268+0100 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=2560M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2018-11-03T21:08:06.062+0100 I CONTROL  [signalProcessingThread] got signal 15 (Terminated: 15), will terminate after current cmd ends
+2018-11-03T21:08:06.062+0100 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2018-11-03T21:08:06.062+0100 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2018-11-03T21:08:06.326+0100 I CONTROL  [signalProcessingThread] now exiting
+2018-11-03T21:08:06.378+0100 I CONTROL  [signalProcessingThread] shutting down with code:0
 null

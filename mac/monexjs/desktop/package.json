@@ -20,7 +20,9 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
+    "bluebird": "^3.5.2",
     "child-process": "^1.0.2",
+    "child-process-promise": "^2.2.1",
     "child_process": "^1.0.2",
     "detect-port": "^1.2.2",
     "electron-log": "^2.2.14",
@@ -28,7 +30,9 @@
     "kill-port": "^1.1.0",
     "node-powershell": "^3.3.1",
     "portscanner": "^2.1.1",
+    "shelljs": "^0.8.2",
     "string-search": "^1.2.0",
-    "sudo-prompt": "^8.2.0"
+    "sudo-prompt": "^8.2.0",
+    "util": "^0.11.1"
   }
 }

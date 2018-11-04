@@ -133,22 +133,29 @@ function startMongo() {
     ls.stdout.on('data', function (res) {
         appendToDroidOutput('\n' + 'stdout: ' + res + '<br>');
         codeOutput = res.toString().trim();
-        if (codeOutput == "startedrunning"){
+        //if (codeOutput === "2018-11-04T06:36:32.342+0100INETWORK[initandlisten]waitingforconnectionsonport27017"){
+        console.log(codeOutput.search("INETWORK[initandlisten]waitingforconnectionsonport27017"));
+        // if(codeOutput.search("INETWORK[initandlisten]waitingforconnectionsonport27017") > 0){
             setStatusmongo("Stop");
             setid('port-mongo', '27017');
             appendToDroidOutput('\n' + 'MongoDB Started ' + '<br>');
             execsh('returnmongopid', 'pid-mongo');
-        }else{
-            appendToDroidOutput("error starting mongodb");
-            setStatusmongo("Start")
-        }
+        // }
     });
 
     ls.stderr.on('data', function (data) {
-        appendToDroidOutput('\n' + 'stderr: ' + data + '<br>');
+        appendToDroidOutput("error starting mongodb");
+        setStatusmongo("Start")
+        setid('port-mongo', 'port');
+        setid('pid-mongo', 'pid');
+        stopMongo();
     });
 
     ls.on('close', function (code) {
+      setStatusmongo("Start")
+      setid('port-mongo', 'port');
+      setid('pid-mongo', 'pid');
+      stopMongo();
         //  if (code == 0){
         // 	  setStatus('Stop');
         //  }else{
@@ -164,15 +171,15 @@ function stopMongo(){
         appendToDroidOutput(err);
       }
       codeOutput = stdout.toString().trim();
-      if (codeOutput == "closed"){
+      // if (codeOutput == "closed"){
         setStatusmongo('Start');
         setid('port-mongo', 'port');
         setid('pid-mongo', 'pid');
         appendToDroidOutput('\n' + 'MongoDB Closed ' + '<br>');
-      }else{
-        setStatusmongo('Start');
-        appendToDroidOutput("trying to stop mongo error");
-      }
+      // }else{
+      //   setStatusmongo('Start');
+      //   appendToDroidOutput("trying to stop mongo error");
+      // }
       // appendToDroidOutput(stdout);
       
     });
