@@ -1,10 +1,15 @@
 {
   "name": "Monexjs",
   "version": "1.0.0",
+  "license": "null",
   "description": "javascript standalone server",
+  "author": "Adeojo emmanuel $ team monex",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "repository": "",
   "keywords": [
@@ -13,11 +18,38 @@
     "start",
     "server"
   ],
-  "author": "Adeojo emmanuel $ team monex",
-  "license": "null",
   "devDependencies": {
     "electron": "~1.6.2",
+    "electron-builder": "^20.31.2",
+    "electron-installer-dmg": "^2.0.0",
     "mocha": "^5.2.0"
+  },
+  "build": {
+    "appId": "com.electron.Monexjs",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
   },
   "dependencies": {
     "bluebird": "^3.5.2",

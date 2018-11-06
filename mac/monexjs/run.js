@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var express = require('express');
 var isWin = process.platform;
 var app = express();

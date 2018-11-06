@@ -1,0 +1,5 @@
+building 
+
+use asar so as ur source code would not be visible
+
+asar pack your-app app.asar

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict'
 const exec = require('child_process').execSync;
 function killport(port) {

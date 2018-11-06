@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var exec = require('child_process').exec;
 var os = require("os");
 var drive = (os.platform == "win32") ? process.cwd().split(path.sep)[0] : "/"
@@ -63,8 +64,7 @@ function execsh(shellname, vid){
 
 function startNode() {
   const { exec } = require('child_process');
-  var ls = processes.spawn(drive + "Applications/monexjs/shell/nodestart.sh")
-
+  var ls = processeses.spawn('sh', [drive + "Applications/monexjs/shell/nodestart.sh"], { shell: true });
   ls.stdout.on('data', function(res){
     console.log(res);
     codeOutput = res.toString().trim();
@@ -98,6 +98,7 @@ function startNode() {
 
   ls.on('close', function (code) {
     console.log(code)
+    setStatus('Start');
   });
 }
 
@@ -152,7 +153,9 @@ function multiSearchOr(text, searchWords){
 
 function startMongo() {
   const { exec } = require('child_process');
-    var ls = processeses.spawn(drive + "Applications/monexjs/shell/startmongo.sh");
+    // var ls = processeses.spawn(drive + "Applications/monexjs/shell/startmongo.sh");
+    var ls = processeses.spawn('sh', [drive + "Applications/monexjs/shell/startmongo.sh"], { shell: true });
+    console.log(ls);
     ls.stdout.on('data', function (res) {
         appendToDroidOutput('\n' + 'stdout: ' + res + '<br>');
         codeOutput = res.toString().trim();
