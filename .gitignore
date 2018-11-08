@@ -1,2 +1,12 @@
-monexjs/node_modules/
-monexjs/desktop/node_modules/
+#node modules
+/mac/node_modules
+/mac/node_modules/monexjs/node_modules
+/mac/node_modules/monexjs/desktop/node_modules
+/mac/node_modules/monexjs/desktop/dist
+
+/windows/node_modules
+/windows/node_modules/monexjs/node_modules
+/windows/node_modules/monexjs/desktop/node_modules
+/windows/node_modules/monexjs/desktop/dist
+# System Files
+.DS_Store

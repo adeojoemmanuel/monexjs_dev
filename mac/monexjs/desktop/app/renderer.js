@@ -4,7 +4,7 @@ var os = require("os");
 var drive = (os.platform == "win32") ? process.cwd().split(path.sep)[0] : "/"
 var log = require('electron-log');
 let $ = require('jquery');
-const processes = require('child_process');
+// const processes = require('child_process');
 const processeses = require('child_process');
 var isWin = process.platform;
 var stringSearcher = require('string-search');
@@ -53,7 +53,7 @@ function setStatusmongo(msg) {
 };
 
 function execsh(shellname, vid){
-  exec(drive + "Applications/monexjs/shell/" + shellname + ".sh", (err, stdout, stderr) => {
+  exec(drive + "Applications/monexjs/shell/" + shellname + ".sh", { shell: true, stdio: 'pipe' }, (err, stdout, stderr) => {
     if (err) {
       appendToDroidOutput(err);
       return;
@@ -64,7 +64,7 @@ function execsh(shellname, vid){
 
 function startNode() {
   const { exec } = require('child_process');
-  var ls = processeses.spawn('sh', [drive + "Applications/monexjs/shell/nodestart.sh"], { shell: true });
+  var ls = processeses.spawn('sh', [drive + "Applications/monexjs/shell/nodestart.sh"], { shell: true, stdio: 'pipe' });
   ls.stdout.on('data', function(res){
     console.log(res);
     codeOutput = res.toString().trim();
@@ -97,8 +97,12 @@ function startNode() {
   });
 
   ls.on('close', function (code) {
-    console.log(code)
-    setStatus('Start');
+    if (code == 0){
+      setStatus('Stop');
+    }else{
+      console.log(code)
+      setStatus('Start');
+    }
   });
 }
 
@@ -154,7 +158,7 @@ function multiSearchOr(text, searchWords){
 function startMongo() {
   const { exec } = require('child_process');
     // var ls = processeses.spawn(drive + "Applications/monexjs/shell/startmongo.sh");
-    var ls = processeses.spawn('sh', [drive + "Applications/monexjs/shell/startmongo.sh"], { shell: true });
+    var ls = processeses.spawn('sh', [drive + "Applications/monexjs/shell/startmongo.sh"], { shell: true, stdio: 'pipe' });
     console.log(ls);
     ls.stdout.on('data', function (res) {
         appendToDroidOutput('\n' + 'stdout: ' + res + '<br>');
@@ -178,15 +182,14 @@ function startMongo() {
     });
 
     ls.on('close', function (code) {
-      setStatusmongo("Start")
-      setid('port-mongo', 'port');
-      setid('pid-mongo', 'pid');
-      stopMongo();
-        //  if (code == 0){
-        // 	  setStatus('Stop');
-        //  }else{
-        // 	setStatus('Start ');
-        // }
+         if (code == 0){
+        	  setStatus('Stop');
+         }else{
+        	setStatusmongo("Start")
+          setid('port-mongo', 'port');
+          setid('pid-mongo', 'pid');
+          stopMongo();
+        }
     });
 }
 
