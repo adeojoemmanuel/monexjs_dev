@@ -112,6 +112,44 @@ router.post('/collection', function (req, res, next) {
     });
 }); 
 
+
+// Listen for add contactlist post request
+router.post('/addcollection', function (req, res, next) {
+    var databaseName = req.body.DB; 
+    var collectionName = req.body.collection;
+    console.log('----creat collection req contackItem: ' + databaseName);
+    var db = new Db(databaseName, new Server('localhost', 27017)); 
+    // Establish connection to db
+    db.open(function (err, db) {
+        // Create a collection 
+        console.log("progress");
+        db.createCollection(collectionName, function (err, collection) {
+            console.log("Collection created");
+            res.json(true);
+            db.close();
+        });
+    });
+});
+
+
+// Listen for addDB post request
+router.post('/addDB', function (req, res, next) {
+    var databaseName = req.body.DB;
+    console.log('req contackItem: ' + databaseName);
+    var db = new Db(databaseName, new Server('localhost', 27017)); 
+    // Establish connection to db
+    db.open(function (err, db) {
+        // Create a null collection
+        db.createCollection(databaseName,  function (err, collection) {
+        // db.createCollection(databaseName, { w: 1 }, function (err, collection) {
+            if (err) throw err;
+            console.log("DB created");
+            res.json(true);
+            db.close();
+        });
+    });
+});
+
 // Listen for viewcollection post request
 router.post('/viewcollection', function (req, res, next) {
     console.log("-- recived viewcollection post request --");
@@ -146,41 +184,7 @@ router.post('/dropDB', function (req, res, next) {
     });
 });
 
-// Listen for addDB post request
-router.post('/addDB', function (req, res, next) {
-    var databaseName = req.body.DB;
-    console.log('req contackItem: ' + databaseName);
-    var db = new Db(databaseName, new Server('localhost', 27017)); 
-    // Establish connection to db
-    db.open(function (err, db) {
-        // Create a null collection
-        db.createCollection(databaseName,  function (err, collection) {
-        // db.createCollection(databaseName, { w: 1 }, function (err, collection) {
-            if (err) throw err;
-            console.log("DB created");
-            res.json(true);
-            db.close();
-        });
-    });
-});
 
-// Listen for add contactlist post request
-router.post('/addcollection', function (req, res, next) {
-    var databaseName = req.body.DB; 
-    var collectionName = req.body.collection;
-    console.log('----creat collection req contackItem: ' + databaseName);
-    var db = new Db(databaseName, new Server('localhost', 27017)); 
-    // Establish connection to db
-    db.open(function (err, db) {
-        // Create a collection 
-        console.log("progress");
-        db.createCollection(collectionName, function (err, collection) {
-            console.log("Collection created");
-            res.json(true);
-            db.close();
-        });
-    });
-});
 
 // Listen for drop contactlist post request
 router.post('/dropcollection', function (req, res, next) {
