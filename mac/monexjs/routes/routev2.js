@@ -12,7 +12,7 @@ const dbName = 'admin';
 
 
 
-router.post('/adminadduser', function(req, res, next){
+router.post('/v2adminadduser', function(req, res, next){
 	var data = req.body.data;
 	var username = { "username": ObjectID(data.username) };
 	var password = { "password": ObjectID(data.password) };
@@ -23,13 +23,13 @@ router.post('/adminadduser', function(req, res, next){
 	  adminDb.addUser(username, password, function(err, dbs) {
 	    assert.equal(null, err);
 	    assert.ok(dbs.databases.length > 0);
-	    res.json(dbs);
+	    res.json(true);
 	    client.close();
 	  });
 	});
 })
 
-router.post('/adminremoveuser', function(req, res, next){
+router.post('/v2adminremoveuser', function(req, res, next){
 	var data = req.body.data;
 	var username = { "username": ObjectID(data.username) };
 	var password = { "password": ObjectID(data.password) };
@@ -40,13 +40,13 @@ router.post('/adminremoveuser', function(req, res, next){
 	  adminDb.removeUser(username, function(err, dbs) {
 	    assert.equal(null, err);
 	    assert.ok(dbs.databases.length > 0);
-	    res.json(dbs);
+	    res.json(true);
 	    client.close();
 	  });
 	});
 });
 
-router.post('/addDB', function (req, res, next) {
+router.post('/v2addDB', function (req, res, next) {
     var dbName = req.body.DB;
     MongoClient.connect(url, function(err, client) {
 	    // Create a collection we want to drop later
@@ -54,7 +54,8 @@ router.post('/addDB', function (req, res, next) {
 		  // Insert a bunch of documents
 		col.createCollection(dbName,  function (err, collection) {
         // db.createCollection(databaseName, { w: 1 }, function (err, collection) {
-            if (err) throw err;
+            if (err) 
+            	throw err;
             console.log("DB created");
             res.json(true);
             db.close();
@@ -62,7 +63,7 @@ router.post('/addDB', function (req, res, next) {
 	});
 });
 
-router.post('/listdb', function (req, res, next) {
+router.post('/v2listdb', function (req, res, next) {
     // Connect using MongoClient
 	MongoClient.connect(url, function(err, client) {
 	  // Use the admin database for the operation
@@ -78,7 +79,7 @@ router.post('/listdb', function (req, res, next) {
 	});
 }); 
 
-router.post('/serverinfo', function (req, res, next) {
+router.post('/v2serverinfo', function (req, res, next) {
     // Connect using MongoClient
 	MongoClient.connect(url, function(err, client) {
 	  // Use the admin database for the operation
@@ -94,7 +95,7 @@ router.post('/serverinfo', function (req, res, next) {
 	});
 }); 
 
-router.post('/serverstatus', function (req, res, next) {
+router.post('/v2serverstatus', function (req, res, next) {
     // Connect using MongoClient
 	MongoClient.connect(url, function(err, client) {
 	  // Use the admin database for the operation
@@ -111,7 +112,7 @@ router.post('/serverstatus', function (req, res, next) {
 }); 
 
 
-router.post('/insertData', function (req, res, next) {
+router.post('/v2insertData', function (req, res, next) {
     var databaseName = req.body.DB, collection = req.body.collection, data = req.body.data;
     var db = new Db(databaseName, new Server('localhost', 27017));
     MongoClient.connect(url, function(err, client) {
@@ -131,23 +132,30 @@ router.post('/insertData', function (req, res, next) {
 	});
 });
 
-router.post('/dropData', function (req, res, next) {
+
+router.post('/v2dropData', function (req, res, next) {
     var dbName = req.body.DB, collection = req.body.collection, data = req.body.data;
     var par = { "_id": ObjectID(data._id) };
 
 	MongoClient.connect(url, function(err, client) {
 	  // Create a collection we want to drop later
 	const col = client.db(dbName).collection(collection);
-	  // Show that duplicate records got dropped
-	col.collection(collection).remove(par, function (err, result) {
+	  
+	col.collection(collection).deleteOne(par, function (err, result) {
         assert.equal(null, err);
         console.log("Data removed");
         res.json(true);
         db.close();
     });
+	// col.collection(collection).remove(par, function (err, result) {
+ //        assert.equal(null, err);
+ //        console.log("Data removed");
+ //        res.json(true);
+ //        db.close();
+ //    });
 });
 
-router.post('/listcollection', function (req, res, next) {
+router.post('/v2listcollection', function (req, res, next) {
 	var dbName = req.body.DB;
 	// Connect using MongoClient
 	MongoClient.connect(url, function(err, client) {
@@ -165,7 +173,7 @@ router.post('/listcollection', function (req, res, next) {
 });
 
 
-router.post('/createCollection', function (req, res, next) {
+router.post('/v2createCollection', function (req, res, next) {
 	var databaseName = req.body.DB; 
     var collectionName = req.body.collection;
 	MongoClient.connect(url, function(err, client) {
@@ -181,7 +189,7 @@ router.post('/createCollection', function (req, res, next) {
 	});
 }); 
 
-router.post('/viewcollection', function (req, res, next) {
+router.post('/v2viewcollection', function (req, res, next) {
 	var dbName = req.body.DB, collection = req.body.collection;
 	MongoClient.connect(url, function(err, client) {
 	  // Create a collection we want to drop later
@@ -198,7 +206,7 @@ router.post('/viewcollection', function (req, res, next) {
 	});
 });
 
-router.post('/dropcollection', function (req, res, next) {
+router.post('/v2dropcollection', function (req, res, next) {
     var databaseName = req.body.DB, collectionName = req.body.collection;
 
     MongoClient.connect(url, function(err, client) {
@@ -214,7 +222,7 @@ router.post('/dropcollection', function (req, res, next) {
 	});
 });
 
-router.post('/readfile', function (req, res, next) {
+router.post('/v2readfile', function (req, res, next) {
 	MongoClient.connect(url, function(err, client) {
 	  const db = client.db(dbName);
 	  const gridStore = new GridStore(db, null, "w");

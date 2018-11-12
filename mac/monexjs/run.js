@@ -8,6 +8,7 @@ var path = require('path');
 var os = require("os");
 var drive = (os.platform == "win32") ? process.cwd().split(path.sep)[0] : "/"
 var routes = require(drive + 'Applications/monexjs/routes/index');
+var routesv2 = require(drive + 'Applications/monexjs/routes/routesv2');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -41,7 +42,7 @@ app.use('/', routes);
 app.use('/login', routes);
 app.use('/default', routes);
 app.use('/admin', routes);
-app.use('//main/mainView', routes);
+app.use('/main/mainView', routes);
 app.use('/dashboard', routes);
 app.use('/main/mainView', routes);
 app.use('/main/collections', routes);
@@ -56,6 +57,21 @@ app.use('/addcollection', routes);
 app.use('/dropcollection', routes);
 app.use('/insertData', routes);
 app.use('/dropData', routes);
+
+//route version 2 "upgrade of mongodb driver"
+app.use('/v2adminadduser', routesv2);
+app.use('/v2adminremoveuser', routesv2);
+app.use('/v2addDB', routesv2);
+app.use('/v2listdb', routesv2);
+app.use('/v2serverinfo', routesv2);
+app.use('/v2serverstatus', routesv2);
+app.use('/v2insertData', routesv2);
+app.use('/v2dropData', routesv2);
+app.use('/v2listcollection', routesv2);
+app.use('/v2createCollection', routesv2);
+app.use('/v2viewcollection', routesv2);
+app.use('/v2dropcollection', routesv2);
+app.use('/v2readfile', routesv2);
 app.use('/main/main/collections/:data', routes);
 app.use('/:projectname', routes);
 // catch 404 and forward to error handler
