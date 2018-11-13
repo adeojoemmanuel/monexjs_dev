@@ -33,7 +33,7 @@
     "kill-port": "^1.1.0",
     "method-override": "^2.3.9",
     "mongodb": "^2.2.1",
-    "morgan": "^1.8.2",
+    "morgan": "^1.9.1",
     "net": "^1.0.2",
     "serve-favicon": "^2.4.3",
     "string-search": "^1.2.0",
