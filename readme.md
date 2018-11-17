@@ -113,22 +113,22 @@ the app would be compliled as released after debugging and testing
 
 ## Contributing
 
-you would be added to the contributors when your pull request is accepted.
+clone->make changes->submit a pull request
 
 ## Versioning
 
-We would be  useing [SemVer](http://semver.org/) for versioning. 
+ useing [SemVer](http://semver.org/) for versioning. 
 
 ## Authors
 
 * **Adeojo Emmanuel** - *Initial work* - [Adeojo Emmanuel](https://github.com/adeojoemmanuel)
 
-## Co-Authors
+## contributors
 
-* **Oyindahl**
-* **Oyetunmibi Oyinkan**
+Oyindahl
+Oyetunmibi Oyinkan (https://github.com/oyin-k)
 
-See also the list of [contributors](https://bitbucket.org/oyink7/monexjs/src/master/contributors.md) who participated in this project.
+See also the list of [contributors](https://github.com/adeojoemmanuel/monexjs_dev/contributors.md) who participated in this project.
 
 ## License
 
