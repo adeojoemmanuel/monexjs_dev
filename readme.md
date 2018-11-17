@@ -125,7 +125,8 @@ clone->make changes->submit a pull request
 
 ## contributors
 
-Oyindahl
+Oyindahl (https://github.com/oyind)
+
 Oyetunmibi Oyinkan (https://github.com/oyin-k)
 
 See also the list of [contributors](https://github.com/adeojoemmanuel/monexjs_dev/contributors.md) who participated in this project.
