@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Total No Of Database: {{database_no}}kb" type="primary">
+      
+      <i class="nb-lightbulb"></i>
+    </ngx-status-card>
+  </div>
+
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Total Size Of Database on Disk: {{totalsize}}kb" type="success">
+      <i class="nb-roller-shades"></i>
+    </ngx-status-card>
+  </div>
+
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Create New Database" type="info"  (click)="showLargeModal()" >
+      <i class="nb-audio"></i>
+    </ngx-status-card>
+  </div>
+
+  <div class="col-xxxl-3 col-md-6">
+    <ngx-status-card title="Coffee Maker" type="warning">
+      <i class="nb-coffee-maker"></i>
+    </ngx-status-card>
+  </div>
+</div>
+
+
+
+<div class="row" *ngIf = "level == 0">
+  
+
+  
+  <table class="table table-hover">
+      <thead >
+          <th>S/N</th>
+          <th>Name</th>
+          <th>Size On Disk</th>
+          <th>Empty</th>
+          <th>View Collections</th>
+          <th>Delete DB</th>
+          
+      </thead>
+      <tbody>
+          <tr *ngFor = "let items of databases;let i = index">
+              <td>{{i+1}}</td>
+              <td>{{items.name}}</td>
+              <td>{{items.sizeOnDisk}}</td>
+              <td>{{items.empty}}</td>
+              <td><button class="btn btn-primary" (click)="getcollection(items.name)">View Collections</button></td>
+              <td><button class="btn btn-primary" (click)="delete(items.name)">Delete DB</button></td>
+          </tr>
+         
+          </tbody>
+    </table>
+  
+
+ 
+
+ 
+</div>
+
+<div class="row" *ngIf = "level == 1">
+    <button class="btn btn-primary" (click)="back()">Back</button>
+    <table class="table table-hover">
+        <thead >
+            <th>S/N</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>View Collections</th>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let items of collection;let i = index">
+                <td>{{i+1}}</td>
+                <td>{{items.name}}</td>
+                <td>{{items.type}}</td>
+                <td><button class="btn btn-primary" (click)="viewcollections(items.name)">View Details</button></td>
+            </tr>
+           
+            </tbody>
+      </table>
+  </div>
+
+  <div class="row" *ngIf = "level == 2">
+      <button class="btn btn-primary" (click)="back1()">Back</button>
+      <table class="table table-hover">
+          <thead>
+          <tr>
+            <td *ngFor=" let key of keys">
+              {{key}}
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+    <tr *ngFor=" let res of view_collection">
+      <td *ngFor=" let key of keys">
+        {{res[key]}}
+      </td>
+    </tr>
+  </tbody>
+    </table>
+    </div>
