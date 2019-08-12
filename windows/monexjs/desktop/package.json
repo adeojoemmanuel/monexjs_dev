@@ -16,7 +16,7 @@
   "author": "Adeojo emmanuel $ team monex",
   "license": "null",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron": "~1.8.8"
   },
   "dependencies": {
     "child-process": "^1.0.2",
