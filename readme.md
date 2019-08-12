@@ -26,7 +26,7 @@ What things you need to setup the project and how to install them
 
 2) electron       
 
-    - install electron useing npm install electron -g      
+    - install electron using `npm install electron -g`
 
 
 
@@ -38,7 +38,7 @@ electron -v
 
 ### Installing
 
-  - clone using git clone https://github.com/adeojoemmanuel/monexjs_dev.git
+  - clone using `git clone https://github.com/adeojoemmanuel/monexjs_dev.git`
   
   - after cloneing go into monexjs_dev the directory 
 
@@ -117,7 +117,7 @@ clone->make changes->submit a pull request
 
 ## Versioning
 
- useing [SemVer](http://semver.org/) for versioning. 
+ Using [SemVer](http://semver.org/) for versioning. 
 
 ## Authors
 
