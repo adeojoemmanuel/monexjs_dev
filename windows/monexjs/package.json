@@ -4,7 +4,9 @@
   "description": "javascript server ",
   "main": "run.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,8 @@
     "string-search": "^1.2.0",
     "string_decoder": "^1.1.1",
     "sudo-prompt": "^8.2.0",
-    "supertest": "^3.0.0"
-  }
+    "supertest": "^3.0.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
