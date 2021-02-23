@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.17.2",
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.24.7",
     "child_process": "^1.0.2",
     "chokidar": "^1.7.0",
     "cookie-parser": "^1.4.3",
