@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.17.2",
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.26.9",
     "child_process": "^1.0.2",
     "chokidar": "^1.7.0",
     "cookie-parser": "^1.4.3",
@@ -29,7 +29,7 @@
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "http": "0.0.0",
-    "kill-by-port": "0.0.1",
+    "kill-by-port": "0.0.2",
     "kill-port": "^1.1.0",
     "method-override": "^2.3.9",
     "mongodb": "^2.2.1",
