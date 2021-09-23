@@ -26,7 +26,7 @@
     "electron-sudo": "^4.0.12",
     "express": "^4.15.4",
     "favicon": "0.0.2",
-    "find-process": "^1.1.1",
+    "find-process": "^1.4.5",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.4.1",
     "http": "0.0.0",
