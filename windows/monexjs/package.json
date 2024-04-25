@@ -40,6 +40,6 @@
     "string-search": "^1.2.0",
     "string_decoder": "^1.1.1",
     "sudo-prompt": "^8.2.0",
-    "supertest": "^3.0.0"
+    "supertest": "^7.0.0"
   }
 }
