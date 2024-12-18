@@ -24,7 +24,7 @@
     "ejs": "^2.5.7",
     "electron-open-link-in-browser": "^1.0.2",
     "electron-sudo": "^4.0.12",
-    "express": "^4.15.4",
+    "express": "^4.21.2",
     "favicon": "0.0.2",
     "find-process": "^1.1.1",
     "gulp": "^3.9.1",
