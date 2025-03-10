@@ -14,7 +14,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/oyink7/monexJS#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^1.8.2",
     "body-parser": "^1.17.2",
     "browser-sync": "^2.18.13",
     "child_process": "^1.0.2",
