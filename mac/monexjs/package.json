@@ -29,7 +29,7 @@
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.2.1",
     "http": "0.0.0",
-    "kill-by-port": "0.0.1",
+    "kill-by-port": "0.0.2",
     "kill-port": "^1.1.0",
     "method-override": "^2.3.9",
     "mongodb": "^2.2.1",
