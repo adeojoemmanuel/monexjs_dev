@@ -15,20 +15,20 @@
   "homepage": "https://bitbucket.org/oyink7/monexJS#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "body-parser": "^1.17.2",
-    "browser-sync": "^2.18.13",
+    "body-parser": "^1.20.4",
+    "browser-sync": "^2.27.11",
     "child_process": "^1.0.2",
-    "chokidar": "^1.7.0",
+    "chokidar": "^3.0.0",
     "cookie-parser": "^1.4.3",
     "detect-port": "^1.2.2",
     "ejs": "^2.5.7",
     "electron-open-link-in-browser": "^1.0.2",
     "electron-sudo": "^4.0.12",
-    "express": "^4.15.4",
+    "express": "^4.22.0",
     "favicon": "0.0.2",
     "find-process": "^1.1.1",
     "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.4.1",
+    "gulp-nodemon": "^2.5.0",
     "http": "0.0.0",
     "kill-by-port": "0.0.1",
     "kill-port": "^1.1.0",
@@ -40,6 +40,6 @@
     "string-search": "^1.2.0",
     "string_decoder": "^1.1.1",
     "sudo-prompt": "^8.2.0",
-    "supertest": "^3.0.0"
+    "supertest": "^7.1.3"
   }
 }
